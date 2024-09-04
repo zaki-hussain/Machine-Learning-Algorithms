@@ -23,7 +23,7 @@ There are three other methods are:
 The residual is the vertical distance between each of the data points and the linear regression line. We want to minimise the residual sum of squares (RSS).
 
 We can write RSS as:
-$\text{RSS} = \sum _{i=1} ^{n} (y_{i} - (mx_{i} + c))^{2}$
+$\text{RSS}=\sum_{i=1}^{n}(y_{i}-(mx_{i}+c))^{2}$
 
 Additionally, $\bar{y} = m\bar{x} + c$, so $c = \bar{y} - m\bar{x}$
 
