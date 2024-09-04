@@ -13,7 +13,7 @@ class KNN:
         self.distances = np.sqrt(np.sum((self.x_train-self.new_data_point)**2, axis=1))
         self.ordered_indices = np.argsort(self.distances)
         self.prediction = np.argmax(np.bincount(self.y_train[self.ordered_indices][:self.k]))
-        print(self.prediction)
+        return self.prediction
 
 if __name__ == "__main__":
     df = pd.read_csv("iris.csv")
@@ -36,4 +36,4 @@ if __name__ == "__main__":
 
     new_data_point = np.array([float(input("What is the sepal length (cm)?\n")),float(input("What is the sepal width (cm)\n")),float(input("What is the petal length (cm)?\n")),float(input("What is the petal width (cm)?\n"))])
 
-    iris_classifier.predict(new_data_point)
+    print(iris_classifier.predict(new_data_point))
