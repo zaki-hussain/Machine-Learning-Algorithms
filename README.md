@@ -38,6 +38,8 @@ $=\sum_{i=1}^{n}((y_{i}-\bar{y})-m(x_{i}-m\bar{x}))^{2}$
 
 $=\sum_{i=1}^{n}(y_{i}-\bar{y})^2-2m(x_{i}-m\bar{x})(y_{i}-\bar{y})+m^2(x_{i}-m\bar{x})^{2}$
 
+$=\sum_{i=1}^{n}(y_{i}-\bar{y})^2-2m\sum_{i=1}^{n}(x_{i}-m\bar{x})(y_{i}-\bar{y})+m^2\sum_{i=1}^{n}(x_{i}-m\bar{x})^{2}$
+
 $=S_{yy}-2mS_{xy}+m^2S_{xx}$
 
 
@@ -51,7 +53,8 @@ $mS_{xx}=S_{xy}$
 
 $m =\frac{S_{xy}}{S_{xx}}$
 
-Therefore, we can find $m$, which is our gradient and $c$, which our y-intercept with:
+Therefore, we can find $m$ and $c$ with:
 
 $m =\frac{S_{xy}}{S_{xx}}$
+
 $c =\bar{y}-m\bar{x}$
