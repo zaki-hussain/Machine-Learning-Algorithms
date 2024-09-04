@@ -1,6 +1,6 @@
 # Machine Learning Algorithms
 
-## K-Nearest Neighbours Algorithm (KNN)
+## k-Nearest Neighbours Algorithm (KNN)
 This algorithm takes three parameters:
 
 1. `k`: The number of neighbours to consider
@@ -28,30 +28,37 @@ $$
 $$
 
 Additionally,
-$$y = mx + c$$
+
+$y = mx + c$
+
 So it follows that,
-$$\bar{y} = m\bar{x} + c
-\\ c = \bar{y} - m\bar{x}$$
+
+$ \bar{y} = m\bar{x} + c
+\\ c = \bar{y} - m\bar{x}$
+
+
 We can substitute this into RSS and expand the brackets:
 
-$$
+$
 \text{RSS} = \sum _{i=1} ^{n} (y_{i} - (mx_{i} + \bar{y} - m\bar{x}))^{2}
 \\ = \sum _{i=1} ^{n} (y_{i} - mx_{i} - \bar{y} + m\bar{x})^{2}
 \\ = \sum _{i=1} ^{n} ((y_{i} - \bar{y}) - m(x_{i}  - m\bar{x}))^{2}
 \\ = \sum _{i=1} ^{n} (y_{i} - \bar{y})^2 -2m(x_{i}  - m\bar{x})(y_{i} - \bar{y}) + m^2(x_{i}  - m\bar{x})^{2}
 \\ = S_{yy} -2mS_{xy} + m^2S_{xx}
-$$
+$
 
 As we want to minimise RSS, we can differentiate it with respect to $m$ and make it equal to 0 to find which value of m, gives the minimum RSS.
-$$
+
+$
 -2S_{xy} + 2mS_{xx} = 0
 \\ 2mS_{xx} = 2S_{xy}
 \\ mS_{xx} = S_{xy}
 \\ m = \frac{S_{xy}}{S_{xx}}
-$$
+$
 
 Therefore, we can find $m$, which is our gradient and $c$, which our y-intercept with:
-$$
+
+$
 m = \frac{S_{xy}}{S_{xx}}
 \\ c = \bar{y} - m\bar{x}
-$$
+$
