@@ -14,12 +14,13 @@ class KNN:
         self.new_data_point = new_data_point
         self.distances = np.sqrt(np.sum((self.x_train-self.new_data_point)**2, axis=1))
         self.ordered_indices = np.argsort(self.distances)
-        print(self.y_train[self.ordered_indices][:self.k])
+        self.prediction = np.argmax(np.bincount(self.y_train[self.ordered_indices][:self.k]))
+        print(self.prediction)
 
 
 df = pd.read_csv("iris.csv")
 df = df.drop("Id", axis=1)
-y_train = np.array([])
+y_train = np.array([], dtype=int)
 
 for i in df.index:
     match df.loc[i, "Species"]:
