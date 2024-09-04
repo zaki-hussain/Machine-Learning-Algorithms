@@ -25,33 +25,33 @@ The residual is the vertical distance between each of the data points and the li
 We can write RSS as:
 $\text{RSS}=\sum_{i=1}^{n}(y_{i}-(mx_{i}+c))^{2}$
 
-Additionally, $\bar{y} = m\bar{x} + c$, so $c = \bar{y} - m\bar{x}$
+Additionally, $\bar{y}=m\bar{x}+c$, so $c=\bar{y}-m\bar{x}$
 
 
 We can substitute this into RSS and expand the brackets:
 
-$\text{RSS} = \sum _{i=1} ^{n} (y_{i} - (mx_{i} + \bar{y} - m\bar{x}))^{2}$
+$\text{RSS}=\sum_{i=1}^{n}(y_{i}-(mx_{i}+\bar{y}-m\bar{x}))^{2}$
 
-$= \sum _{i=1} ^{n} (y_{i} - mx_{i} - \bar{y} + m\bar{x})^{2}$
+$=\sum_{i=1}^{n}(y_{i}-mx_{i}-\bar{y}+m\bar{x})^{2}$
 
-$= \sum _{i=1} ^{n} ((y_{i} - \bar{y}) - m(x_{i}  - m\bar{x}))^{2}$
+$=\sum_{i=1}^{n}((y_{i}-\bar{y})-m(x_{i}-m\bar{x}))^{2}$
 
-$= \sum _{i=1} ^{n} (y_{i} - \bar{y})^2 -2m(x_{i}  - m\bar{x})(y_{i} - \bar{y}) + m^2(x_{i}  - m\bar{x})^{2}$
+$=\sum_{i=1}^{n}(y_{i}-\bar{y})^2-2m(x_{i}-m\bar{x})(y_{i}-\bar{y})+m^2(x_{i}-m\bar{x})^{2}$
 
-$= S_{yy} -2mS_{xy} + m^2S_{xx}$
+$=S_{yy}-2mS_{xy}+m^2S_{xx}$
 
 
 As we want to minimise RSS, we can differentiate it with respect to $m$ and make it equal to 0 to find which value of m, gives the minimum RSS.
 
-$-2S_{xy} + 2mS_{xx} = 0$
+$-2S_{xy}+2mS_{xx}=0$
 
-$2mS_{xx} = 2S_{xy}$
+$2mS_{xx}=2S_{xy}$
 
-$mS_{xx} = S_{xy}$
+$mS_{xx}=S_{xy}$
 
-$m = \frac{S_{xy}}{S_{xx}}$
+$m =\frac{S_{xy}}{S_{xx}}$
 
 Therefore, we can find $m$, which is our gradient and $c$, which our y-intercept with:
 
-$m = \frac{S_{xy}}{S_{xx}}$
-$c = \bar{y} - m\bar{x}$
+$m =\frac{S_{xy}}{S_{xx}}$
+$c =\bar{y}-m\bar{x}$
